@@ -66,6 +66,9 @@ class User
     def update_post(post)
         index = @posts.index do |existing_post|
         existing_post.post_id == post.post_id
+        end
+        
+         @posts[index] = post unless index.nil?
     end
 
     # Deletes a post owned by the user.
