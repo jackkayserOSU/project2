@@ -19,25 +19,35 @@ https://keepachangelog.com/en/1.1.0/
 - Added total user count support
 - Added deleted account tracking
 - Added recently registered user retrieval for dashboard statistics
+- Added Minitest as a testing dependency
+- Added automated tests for the `User` model
+- Added tests for user creation and unique user IDs
+- Added tests for username, email, and password validation
+- Added tests for successful and unsuccessful login
+- Added tests for logout behavior
+- Added tests for user post create, update, delete, and count behavior
 
 ### Updated
 - Expanded `UserManager` beyond the base UML CRUD operations to support project rubric requirements
 - Updated user deletion to return the deleted user and track successful account deletions
 - Updated `User` validation so invalid users are rejected before account creation
+- Updated README with dependency installation instructions
+- Updated README with Minitest testing instructions and examples
+- Updated README with current authentication and user-management progress
 - Improved method documentation and return descriptions
 
 ### Fixed
 - Fixed deleted account tracking initialization
 - Fixed user deletion logic so nonexistent users do not increase the deleted account count
 - Fixed username validation messaging to match the three-character minimum
-- Cleaned up minor documentation and formatting issues
+- Fixed minor documentation typos and formatting issues
 
-### Tested
-- Verified user creation and validation behavior in IRB
+### Testing
+- Performed manual IRB testing of user creation
+- Verified username validation rejects invalid usernames
 - Verified successful and unsuccessful login behavior
 - Verified logout and login-state behavior
-- Verified bcrypt-backed authentication
-- Verified `UserManager` registration, searching, duplicate prevention, authentication, user counts, deletion tracking, and recent-user behavior
+- Added `User` automated test suite using Minitest
 
 ## 2026-09-07 - (Auth) - UML diagram outline
 
