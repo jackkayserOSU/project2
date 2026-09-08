@@ -29,6 +29,7 @@ class User
         #handle using bcrypt
         @password = BCrypt::Password.create(password)
 
+        #wait to see how it is implemented down the road
         @address = nil 
         @posts = []
         @logged_in = false
